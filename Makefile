@@ -10,9 +10,13 @@ run : program
 clean :
 		rm -f ./program
 #       rm -f ./all.h.gch
+touch :
+		touch main.cpp
 
 main.o : main.cpp
 		$(GCC) $(gcc_options) -c main.cpp
+Accounting.o : Accounting.cpp
+		$(GCC) $(gcc_options) -c Accounting.cpp
 #Date.o : Date.cpp
 #		$(GCC) $(gcc_options) -c Date.cpp
 
