@@ -1,7 +1,7 @@
 gcc_options = -std=c++17 -Wall --pedantic-errors
 GCC = /opt/homebrew/bin/g++-12
 
-program : main.o
+program : main.o Accounting.o
 		$(GCC) $(gcc_options) -include ../all.h -o $@ $^
 
 run : program
