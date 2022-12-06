@@ -1,22 +1,21 @@
 #include <iostream>
 #include "Accounting.h"
-//#include "Date.h"
+#include "IdNo.h"
 
 using std::cout, std::endl;
 
 int main() {
-    Accounting nakano("Nakano Hayato", 1000, Date(2125, 1, 24));
-    Accounting yamada("Yamada Hirohumi", 200, Date(2123, 7, 15));
+    IdNo a;
+    IdNo b;
+    IdNo c[4];
 
-    nakano.spend(200);
-    yamada.earn(100);
+    cout << "a id: " << a.id() << endl;
+    cout << "b id: " << b.id() << endl;
+    for (int i=0; i<4; i++) {
+        std::cout << "c[" << i << "] id: " << c[i].id() << endl;
+    }
 
-    cout << nakano.name() << endl;
-    cout << nakano.asset() << "yen" << endl;
-    cout << nakano.birthday().year() << "nenn"
-        << nakano.birthday().month() << "gatsu"
-        << nakano.birthday().day() << "nichi" << endl;
-
+    cout << IdNo::get_max_id() << endl;
     
     return 0;
 }
